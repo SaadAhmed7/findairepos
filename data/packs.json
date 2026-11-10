@@ -1,0 +1,74 @@
+[
+  { "id": "run-ai-on-my-laptop", "title": "Run ChatGPT-style AI on my laptop", "blurb": "Private AI chat with no subscription. Start with Ollama, then add a friendly interface.",
+    "repos": [
+      { "n": "ollama/ollama", "why": "The easiest start: one command downloads and runs a model." },
+      { "n": "open-webui/open-webui", "why": "A ChatGPT-like web interface that sits on top of Ollama." },
+      { "n": "Mintplex-Labs/anything-llm", "why": "An all-in-one desktop app, with chat over your own documents built in." },
+      { "n": "ggml-org/llama.cpp", "why": "The engine underneath many local tools. Use it directly for more control." }
+    ] },
+  { "id": "chat-with-my-documents", "title": "Chat with my PDFs and documents", "blurb": "Ask questions and get answers drawn from your own files.",
+    "repos": [
+      { "n": "Mintplex-Labs/anything-llm", "why": "The quickest way in: install the app, then drop in your files." },
+      { "n": "infiniflow/ragflow", "why": "Strong at complex files such as scans and tables. Runs with Docker." },
+      { "n": "zylon-ai/private-gpt", "why": "Built for keeping documents private, with everything running locally." },
+      { "n": "khoj-ai/khoj", "why": "A personal AI that searches your notes and documents." }
+    ] },
+  { "id": "add-skills-to-claude", "title": "Add skills and prompts to my AI assistant", "blurb": "Ready-made skills, workflows and prompts that make assistants more useful.",
+    "repos": [
+      { "n": "anthropics/skills", "why": "Anthropic's public skills repository, and a good model for writing your own." },
+      { "n": "obra/superpowers", "why": "A full skills framework and development method for coding agents." },
+      { "n": "hesreallyhim/awesome-claude-code", "why": "A curated list of skills, hooks and commands for Claude Code." },
+      { "n": "f/prompts.chat", "why": "A large community collection of prompts you can copy and use." }
+    ] },
+  { "id": "build-an-ai-agent", "title": "Build my own AI agent", "blurb": "Frameworks for agents that plan, use tools and finish tasks.",
+    "repos": [
+      { "n": "crewAIInc/crewAI", "why": "Set up a team of agents with roles. Friendly for a first project." },
+      { "n": "langchain-ai/langgraph", "why": "Precise control over each agent step, suited to production work." },
+      { "n": "pydantic/pydantic-ai", "why": "A type-safe Python framework that will feel familiar if you use Pydantic." },
+      { "n": "browser-use/browser-use", "why": "Lets an agent operate a real web browser." }
+    ] },
+  { "id": "connect-ai-to-my-tools", "title": "Connect AI to my apps and tools", "blurb": "MCP servers let assistants reach your files, browser, GitHub and more.",
+    "repos": [
+      { "n": "modelcontextprotocol/servers", "why": "The official reference servers, and the best place to learn how MCP works." },
+      { "n": "punkpeye/awesome-mcp-servers", "why": "A large directory for finding a server for almost any app." },
+      { "n": "github/github-mcp-server", "why": "GitHub's official server for issues, pull requests and code." },
+      { "n": "microsoft/playwright-mcp", "why": "Gives an assistant a browser it can drive and test with." }
+    ] },
+  { "id": "ai-that-writes-code", "title": "Get AI to help me write code", "blurb": "Coding agents for your terminal and editor.",
+    "repos": [
+      { "n": "anthropics/claude-code", "why": "Anthropic's coding agent, for the terminal and editors." },
+      { "n": "openai/codex", "why": "OpenAI's coding agent, which runs in your terminal." },
+      { "n": "anomalyco/opencode", "why": "An open-source terminal agent that works with many model providers." },
+      { "n": "cline/cline", "why": "An open-source coding agent that works inside your editor." },
+      { "n": "continuedev/continue", "why": "Open-source assistant for your editor, and it can use local models." }
+    ] },
+  { "id": "generate-images", "title": "Generate images with AI", "blurb": "Create images on your own machine. A capable graphics card helps a lot.",
+    "repos": [
+      { "n": "lllyasviel/Fooocus", "why": "The simplest to start with: type a prompt and get an image." },
+      { "n": "invoke-ai/InvokeAI", "why": "A polished studio-style interface for creative work." },
+      { "n": "Comfy-Org/ComfyUI", "why": "Node-based workflows. It takes longer to learn and is the most powerful." },
+      { "n": "AUTOMATIC1111/stable-diffusion-webui", "why": "The classic web interface, with a huge range of extensions." }
+    ] },
+  { "id": "turn-audio-into-text", "title": "Turn audio and video into text", "blurb": "Transcribe podcasts, meetings and interviews without paying per minute.",
+    "repos": [
+      { "n": "openai/whisper", "why": "The original speech recognition model. Simple to use from Python." },
+      { "n": "ggml-org/whisper.cpp", "why": "Runs fast on ordinary computers, with no Python needed." },
+      { "n": "SYSTRAN/faster-whisper", "why": "A much faster version of Whisper for Python projects." },
+      { "n": "m-bain/whisperX", "why": "Adds word-level timestamps and labels who is speaking." }
+    ] },
+  { "id": "learn-how-llms-work", "title": "Learn how LLMs work", "blurb": "Courses and code, from first steps to building a model yourself.",
+    "repos": [
+      { "n": "microsoft/generative-ai-for-beginners", "why": "A structured beginner course with lessons you follow in order." },
+      { "n": "mlabonne/llm-course", "why": "A roadmap with notebooks, from fundamentals to engineering." },
+      { "n": "rasbt/LLMs-from-scratch", "why": "Build a working LLM step by step, with code for every chapter." },
+      { "n": "karpathy/nanoGPT", "why": "A small, readable GPT training codebase you can study end to end." }
+    ] },
+  { "id": "replace-paid-apps", "title": "Replace paid apps with my own server", "blurb": "Free alternatives to cloud subscriptions, running on hardware you control.",
+    "repos": [
+      { "n": "awesome-selfhosted/awesome-selfhosted", "why": "The master list. Look here for an alternative to almost anything." },
+      { "n": "immich-app/immich", "why": "A self-hosted alternative to Google Photos." },
+      { "n": "nextcloud/server", "why": "Files, calendar and contacts, as an alternative to Google Drive or Dropbox." },
+      { "n": "dani-garcia/vaultwarden", "why": "A lightweight password manager server, compatible with Bitwarden apps." },
+      { "n": "n8n-io/n8n", "why": "Workflow automation you host yourself, as an alternative to Zapier." }
+    ] }
+]

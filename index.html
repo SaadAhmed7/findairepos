@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FindAIRepos: Find the Best AI GitHub Repos</title>
+  <meta name="description" content="Find the GitHub repo you need in seconds. Thousands of top repositories sorted into categories: LLMs, AI agents, AI skills, MCP servers and more.">
+  <meta property="og:title" content="FindAIRepos: Find the Best AI GitHub Repos">
+  <meta property="og:description" content="Search thousands of AI repos: LLMs, agents, AI skills, MCP servers and more.">
+  <meta property="og:type" content="website">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23c2410c'/%3E%3Cpath d='M16 7l2.7 5.8 6.3.8-4.6 4.3 1.2 6.2L16 21.1 10.4 24.1l1.2-6.2L7 13.6l6.3-.8z' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" href="data/repos.json" as="fetch" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="masthead">
+    <a class="wordmark" href="./" aria-label="FindAIRepos home">find<b>AI</b>repos</a>
+    <p class="stat" id="stat"></p>
+    <button class="theme" id="theme" type="button" aria-label="Switch colour theme">
+      <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor"/><path d="M8 1.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg>
+    </button>
+  </header>
+
+  <div class="searchbar">
+    <form class="search" id="search-form" role="search">
+      <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.750" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M13 13l4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <input id="q" type="search" placeholder="Search: ollama, rag, skills…" aria-label="Search repositories" autocomplete="off" spellcheck="false" autofocus>
+      <kbd class="hint">/</kbd>
+      <button class="mode" id="mode" type="button" aria-pressed="false" title="Search by describing what you need, in plain English">Describe it</button>
+    </form>
+  </div>
+
+  <div class="layout">
+    <nav class="cats" id="cats" aria-label="Categories"></nav>
+    <main>
+      <section class="packs" id="packs" aria-label="Starter packs"></section>
+      <div class="listhead" id="listhead">
+        <div class="heading">
+          <h1 id="title">All repositories</h1>
+          <p id="blurb"></p>
+          <div class="viewactions" id="viewactions"></div>
+        </div>
+        <div class="controls">
+          <label>Language
+            <select id="lang"><option value="">Any</option></select>
+          </label>
+          <label>Sort
+            <select id="sort">
+              <option value="best">Best match</option>
+              <option value="stars">Most stars</option>
+              <option value="recent">Recently updated</option>
+            </select>
+          </label>
+          <label class="check"><input type="checkbox" id="active"> Hide inactive</label>
+          <label class="check" title="MIT, Apache, BSD and similar licenses. Check the license yourself before relying on it."><input type="checkbox" id="perm"> Permissive license</label>
+        </div>
+      </div>
+      <p class="count" id="count" role="status"></p>
+      <p class="empty-note" id="empty" hidden></p>
+      <ol class="list" id="list"></ol>
+      <div id="sentinel" aria-hidden="true"></div>
+      <section class="live" id="live"></section>
+    </main>
+  </div>
+
+  <footer class="foot">
+    <p>Repo data comes from the GitHub API. Not affiliated with GitHub. <span id="updated"></span> <span id="suggest-foot"></span></p>
+  </footer>
+
+  <div class="tray" id="tray" hidden></div>
+  <dialog class="panel" id="panel" aria-label="Repository quick start"><div id="panel-body"></div></dialog>
+  <dialog class="compare" id="compare" aria-label="Compare repositories"><div id="compare-body"></div></dialog>
+
+  <script src="site.config.js"></script>
+  <script src="app.js" type="module"></script>
+</body>
+</html>

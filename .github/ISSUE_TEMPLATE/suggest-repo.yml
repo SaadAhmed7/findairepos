@@ -1,0 +1,15 @@
+name: Suggest a repo
+description: Suggest a GitHub repo for FindAIRepos. Approved suggestions appear in Community picks, ranked by thumbs-up votes.
+title: "owner/name"
+labels: ["suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: Put the repo in the title as `owner/name`, for example `ollama/ollama`. After approval, people can vote by adding a thumbs-up to this issue.
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is it useful?
+      description: One or two sentences on who it helps and what it does well.
+    validations:
+      required: true

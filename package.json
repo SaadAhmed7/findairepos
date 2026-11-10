@@ -1,0 +1,16 @@
+{
+  "name": "findairepos",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fetch": "node scripts/fetch-repos.mjs",
+    "embeddings": "node scripts/build-embeddings.mjs",
+    "pages": "node scripts/build-pack-pages.mjs",
+    "refresh": "npm run fetch && npm run embeddings && npm run pages"
+  },
+  "devDependencies": {
+    "@huggingface/transformers": "4.3.2",
+    "dompurify": "3.4.17",
+    "marked": "18.1.3"
+  }
+}
